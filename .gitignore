@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Node / Nuxt
+client/node_modules/
+client/.nuxt/
+client/.output/
+client/.env
+
+# OS
+.DS_Store
+Thumbs.db
