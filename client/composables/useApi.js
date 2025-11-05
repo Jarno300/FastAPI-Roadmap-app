@@ -1,10 +1,18 @@
-import { BASE_URL } from "~/config/constants";
-
 export const useApi = () => {
-  const baseUrl = BASE_URL;
+  const config = useRuntimeConfig();
+  const baseUrl = config.public.apiBase;
   return {
-    async getRoadmaps() {
-      return await $fetch(`${baseUrl}/api/roadmaps`);
+    async health() {
+      return await $fetch(`${baseUrl}/health`);
     },
+    async getUsers() {
+      return await $fetch(`${baseUrl}/users`);
+    },
+    async createUser(email) {
+      return await $fetch(`${baseUrl}/users`, {
+        method: 'POST',
+        body: { email }
+      });
+    }
   };
 };

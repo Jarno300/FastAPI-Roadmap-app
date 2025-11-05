@@ -1,0 +1,10 @@
+{
+  "BackgroundColor": {
+    "red900": "#7F1D1D",
+    "red500": "#EF4444"
+  },
+  "TextColor": {
+    "primary": "#111827",
+    "secondary": "#4B5563"
+  }
+}
